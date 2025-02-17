@@ -1,0 +1,77 @@
+site_name: СМАРТ-Мониторинг
+site_description: СМАРТ-Мониторинг - сервис по всестороннему контролю за установками/доступаvми ИСС Кодекс/Техэксперт
+theme:
+  name: material
+  logo: img/main/logo-white-transparent_v2.png
+  font:
+    text: Roboto
+    code: Roboto mono
+  language: ru
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Использовать светлую тему
+      primary: blue
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Использовать темную тему
+      primary: deep purple
+      accent: blue
+  features:
+    - navigation.sections
+    - navigation.path
+    - navigation.indexes 
+    #- navigation.tabs.sticky 
+    - Navigation sections 
+    - navigation.expand 
+    - toc.integrate 
+    #- navigation.instant 
+    - navigation.top 
+    - search.suggest 
+    - search.highlight 
+    - content.code.copy 
+
+nav:
+  - Главная страница: 'short-review.md'
+  - Вступительное слово: '000-intro.md'
+  - Как это устроено?:
+    - Как это устроено?: '010-how-it-works.md'
+    - Система сбора отчетов: '020-auto-collect-sysinfo.md'
+    - Алертинг: '030-alert.md'
+    - Grafana: '040-grafana.md' 
+    - Интерфейс: '041-grafana-interface.md'
+    - Настройки: '042-grafana-visualization.md'
+  - Как это работает и как это применять: '060-dashboards.md'
+  - Как это внедрять у клиентов: '050-intro-smartuload-smartstatus.md'
+  - Бизнес-кейсы, реальные примеры применения (to be continued...):
+    - (#1) Потерять ключ и тут же его найти: '100-smart-real-cases-1.md' 
+    - (#2) Доверяй, но проверяй (контроль за сторонними сервисами): '101-smart-real-cases-2.md'
+    - (#3) Пустой поиск как помощь в допродажах: '102-smart-real-cases-3.md'
+    - (#4) Последствия пропавшего ключа: '103-smart-real-cases-4.md'
+    - (#5) Уменьшение времени на работу с клиентом: '104-smart-real-cases-5.md'
+  - Приложение №1:
+    - Полный список алертов: '000-appendix-1.md'
+    - Полный список ошибок работы ПК, с кодами и описанием: '000-appendix-2.md'
+
+markdown_extensions: 
+  - meta
+  - admonition # Поддержка информационных панелей (сообщений типа «Внимание», «Совет», «Примечание», etc.)
+  - footnotes # Поддержка встроенных сносок на страницах
+  - attr_list # Использование html-атрибутов и CSS в элементах markdown
+  - md_in_html # Поддержка markdown внутри html
+  - def_list # Поддержка списков определений
+  - pymdownx.tabbed # Использование вкладок (табов)
+  - pymdownx.details # Использование спойлеров (катов)
+  - pymdownx.highlight: # Подсветка синтаксиса в блоках кода
+      anchor_linenums: true
+  - pymdownx.superfences # Поддержка вложенных блоков кода
+  - pymdownx.snippets # Использование заимствованного контента
+  - pymdownx.emoji: # Иконки и эмодзи
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+copyright: |
+  &copy; 2025 СМАРТ-Мониторинг
